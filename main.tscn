@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://DialogueBox.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -13,3 +14,36 @@ margin_bottom = 496.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="DialogueBox" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+
+[node name="Portrait" type="TextureRect" parent="DialogueBox"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="DialogueBox"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Colums" type="ItemList" parent="DialogueBox/Panel"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Name" type="Label" parent="DialogueBox/Panel/Colums"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="Text" type="Label" parent="DialogueBox/Panel/Colums"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="ButtonNext" type="Button" parent="DialogueBox/Panel/Colums"]
+margin_right = 12.0
+margin_bottom = 20.0
+
+[node name="ButtonFinished" type="Button" parent="DialogueBox/Panel/Colums"]
+margin_right = 12.0
+margin_bottom = 20.0
