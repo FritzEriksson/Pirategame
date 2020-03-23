@@ -1,6 +1,7 @@
 extends Node
-var get_back = (Vector2 (135.979, 551.589))
+var get_back = (Vector2 (137.849, 551.589))
 var player
+var memory_things = 0
 
 
 var current_scene = null

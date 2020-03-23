@@ -35,20 +35,20 @@ __meta__ = {
 position = Vector2( 453.684, 574.737 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="2dstagefloor"]
-position = Vector2( 58.0168, 7.68127 )
+position = Vector2( 57.5987, -4.86231 )
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="2dstagefloor/CollisionShape2D"]
-position = Vector2( -13.9423, -0.0189209 )
+position = Vector2( -13.5242, -0.0187988 )
 scale = Vector2( 20.1712, 0.350759 )
 texture = ExtResource( 2 )
 
 [node name="Doorscene" parent="." instance=ExtResource( 3 )]
-position = Vector2( 341.182, 539.153 )
+position = Vector2( 339.928, 527.028 )
 script = null
 
 [node name="player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 137.849, 551.589 )
+position = Vector2( 274.992, 462.948 )
 
 [node name="tavern" parent="." instance=ExtResource( 5 )]
 visible = false

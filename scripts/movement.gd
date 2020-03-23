@@ -12,6 +12,7 @@ func on_scene_entered():
 func _ready():
 	print("Jag startar")
 	set_global_position(Global.get_back)
+	print(globalposition.memory_things)
 
 
 func get_input():

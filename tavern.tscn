@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/quitscene.gd" type="Script" id=1]
 [ext_resource path="res://sprites/tavern.jpg" type="Texture" id=2]
+[ext_resource path="res://scripts/clickthings.gd" type="Script" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 514.175, 302.702 )
+
+[sub_resource type="RectangleShape2D" id=2]
 
 [node name="tavern" type="Node2D"]
 position = Vector2( 510.254, 285.978 )
@@ -21,3 +25,15 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0.108826, 3.75563 )
 shape = SubResource( 1 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( -87.186, 137.289 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Area2D2"]
+position = Vector2( -87.3549, 137.404 )
+scale = Vector2( 0.319009, 0.290777 )
+texture = ExtResource( 4 )
