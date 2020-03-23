@@ -6,5 +6,3 @@ func _process(delta):
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().change_scene("res://bootybae.tscn")
 		emit_signal("pos_spelare")
-		#Global.get_back
-		#playerpos1.playerset

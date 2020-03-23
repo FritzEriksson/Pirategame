@@ -1,8 +1,8 @@
 extends Area2D
-onready var memoryglobal = get_node("/root/Global")
+onready var outsidemem = get_node("/root/Global")
 
 func _ready():
-	if memoryglobal.memory_things > 0:
+	if outsidemem.outside_memory > 0:
 		.hide()
 	
 	
@@ -15,6 +15,6 @@ func _input_event(viewport, event, shape_idx):
 
 #ange funktion av knapp här
 func on_click():
-	memoryglobal.memory_things = 1;
-	print (memoryglobal.memory_things);
+	outsidemem.outside_memory = 1;
+	print (outsidemem.outside_memory);
 	.hide()

@@ -4,7 +4,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32.0952, 32.1114 )
+extents = Vector2( 20.0564, 32.1949 )
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource( 1 )
@@ -13,5 +13,7 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="CollisionShape2D"]
+position = Vector2( -4.76837e-07, 0 )
+scale = Vector2( 0.602785, 1 )
 texture = ExtResource( 2 )
 [connection signal="area_entered" from="." to="." method="_on_Area2D_area_entered"]
