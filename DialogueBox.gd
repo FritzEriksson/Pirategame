@@ -35,7 +35,7 @@ func _on_ButtonFinished_pressed() -> void:
 	hide()
 	
 func update() -> void:
-	var dialogue_player_name = dialogue_player..title
+	var dialogue_player_name = dialogue_player.title
 	name_label.text = dialogue_player_name
 	text_label.text = dialogue_player.text
 	portrait.texture = DialogueDatabase.get_texture(dialogue_player_name, dialogue_player,expression)
