@@ -33,8 +33,6 @@ func _update_navigation_path(start_position, end_position):
 
 func get_interact_pos(pos):
 	if mus == 1:
-		print($Character.position)
-		print(pos)
 		_update_navigation_path($Character.position, pos)
 		mus = 0
 	else:

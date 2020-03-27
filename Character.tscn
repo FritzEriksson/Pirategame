@@ -3,6 +3,5 @@
 [ext_resource path="res://Bilder/icon.png" type="Texture" id=1]
 
 [node name="Character" type="Sprite"]
-position = Vector2( -64.5112, -72.1008 )
+position = Vector2( 0, -32.649 )
 texture = ExtResource( 1 )
-centered = false

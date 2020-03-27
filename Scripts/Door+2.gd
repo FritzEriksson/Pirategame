@@ -6,8 +6,8 @@ onready var sendpos = get_node("..")
 
 func _gui_input(event):
 	sendpos.musvar = 1
-	sendpos.point = intpoint.position
+	sendpos.point = intpoint.global_position
 	if event.is_action_pressed("click"):
-		if player.position == intpoint.position:
+		if player.position == intpoint.global_position:
 			sendpos.camerapos = sendpos.camerapos +2
 			sendpos.scenechange()
