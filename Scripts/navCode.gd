@@ -1,6 +1,6 @@
 extends Navigation2D
 
-export(float) var character_speed = 300.0
+export(float) var character_speed = 200.0
 var path = []
 var mus = 0
 
@@ -32,8 +32,9 @@ func _update_navigation_path(start_position, end_position):
 	set_process(true)
 
 func get_interact_pos(pos):
-	print(pos)
 	if mus == 1:
+		print($Character.position)
+		print(pos)
 		_update_navigation_path($Character.position, pos)
 		mus = 0
 	else:
