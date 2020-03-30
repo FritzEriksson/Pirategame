@@ -1,6 +1,6 @@
 extends Node
 
-const SOURCE_DIRECTORY =
+const SOURCE_DIRECTORY = []
 var characters : Dictionary
 
 func _onready() -> void:
@@ -8,15 +8,15 @@ func _onready() -> void:
 	assert dir.dir_exists(SOURCE_DIRECTORY)
 	if not dir.open(SOURCE_DIRECTORY) == OK:
 		print("Could not read directory %$" % SOURCE_DIRECTORY)
-dir.list_dir_begin()
-var file_name : String
-while true:
-	file_name = dir.get_next()
-	if file_name==:
-		break
-	if not file_name.ends_with(".tres"):
-		continue
-	characters[file_name.get_basename()] = load(SOURCE_DIRECTORY.plus_file(file_name))
+	dir.list_dir_begin()
+	var file_name : String
+	while true:
+		file_name = dir.get_next()
+		if file_name=="":
+			break
+		if not file_name.ends_with(".tres"):
+			continue
+		characters[file_name.get_basename()] = load(SOURCE_DIRECTORY.plus_file(file_name))
 	
 func get_texture(character_name : String, expression : String = "neutral") -> Texture:
 	assert character_name in characters

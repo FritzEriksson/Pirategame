@@ -3,13 +3,14 @@ class_name DialogueBox
 
 signal dialogue_ended()
 
-onready var dialogue_player : DialoguePlayer = get_node("DialoguePlayer")
+onready var dialogue_player = get_node("../DialoguePlayer")
 
 onready var name_label : = get_node("Panel/Colums/Name") as Label
 onready var text_label : = get_node("Panel/Colums/text") as Label
 
 onready var button_next : = get_node("Panel/Colums/ButtonNext") as Button
 onready var button_finished : =  get_node("Panel/Colums/ButtonFinished") as Button
+onready var DialogueDatabase = get_node("../DialogueDatabase")
 
 onready var portrait : = $Portrait as TextureRect
 
@@ -34,7 +35,7 @@ func _on_ButtonFinished_pressed() -> void:
 	emit_signal("dialogue_ended")
 	hide()
 	
-func update() -> void:
+func update_content() -> void:
 	var dialogue_player_name = dialogue_player.title
 	name_label.text = dialogue_player_name
 	text_label.text = dialogue_player.text
