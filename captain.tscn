@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/piratetest2.png" type="Texture" id=1]
+[ext_resource path="res://Sprite.gd" type="Script" id=2]
+
+[node name="captain" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.407211, 0.299216 )
+scale = Vector2( 0.160042, 0.193 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite"]
+visible = false
+margin_left = -784.541
+margin_top = 139.868
+margin_right = 852.459
+margin_bottom = 505.868
+tab_size = 24
+text = "You have found all of the items required to continue your journey."
