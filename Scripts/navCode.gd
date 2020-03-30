@@ -36,4 +36,4 @@ func get_interact_pos(pos):
 		_update_navigation_path($Character.position, pos)
 		mus = 0
 	else:
-		_update_navigation_path($Character.position, get_local_mouse_position()) 
+		_update_navigation_path($Character.position, get_local_mouse_position())
