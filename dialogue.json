@@ -1,4 +1,5 @@
 {
-        "001" : {"name":"Ratpiss", "expression": "neutral", "text" : "You found something?"},
-        "002" : {"name":"Adam Blayne", "expression": "neutral", "text":"I don't think so."} 
+        "1" : {"Name" : "someone", "expression" : "neutral", "text" : "detta är en test dialogue"},
+        "2" : {"Name" : "someone", "expression" : "neutral", "text" : "för att jag har ork"},
+        "3" : {"Name" : "someone", "expression" : "neutral", "text" : "så det så"}
 }

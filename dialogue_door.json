@@ -1,0 +1,13 @@
+{
+		"1" : {
+			
+		"1" : {"Name" : "someone", "expression" : "neutral", "text" : "den här dörren tar dig vidare."},
+		"2" : {"Name" : "someone", "expression" : "neutral", "text" : "detta är bara ett täst än så länge."},
+		"3" : {"Name" : "someone", "expression" : "neutral", "text" : "så det så."}
+		},
+
+		"2" : {
+			
+		"1" : {"Name" : "someone", "expression" : "neutral", "text" : "oops du har inte tagit upp nyckeln än och kan därför inte gå ut"}
+		}
+}
