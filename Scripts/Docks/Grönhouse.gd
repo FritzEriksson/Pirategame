@@ -3,7 +3,7 @@ extends MinKontroll
 onready var intpoint = get_child(0)
 onready var sendpos = get_node("..")
 onready var sprite = get_child(1)
-onready var sendscore = get_node("../../../Camera2D/RichTextLabel")
+onready var sendscore = get_node("../../../Camera2D/Scorelabel")
 
 func _gui_input(event):
 	sendpos.musvar = 1
@@ -13,6 +13,3 @@ func _gui_input(event):
 			print("Funkar")
 			sprite.hide()
 			sendscore.score = sendscore.score + 1
-
-			
-			
