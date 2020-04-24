@@ -7,11 +7,10 @@ onready var movescript = get_node("/root/Island3/Navigation2D")
 onready var player = get_node("/root/Island3/Navigation2D/Character")
 onready var camera = get_node("/root/Island3/Camera2D")
 var camerapos = 0
-var playerspawn = 0
 var cameraxy = [Vector2(0,0), Vector2(1024,0), Vector2(02048,0), Vector2(0,600), Vector2(1024,600), Vector2(2048,600), Vector2(0,1200), Vector2(1024,1200), Vector2(2048,1200)]
-var playerspawnpoint = [Vector2(512,460),Vector2(1536, 300), Vector2(2560,300), Vector2(512,900), Vector2(1536,900), Vector2(2560,900), Vector2(512,1500), Vector2(1536,1500), Vector2(2560,1500)]
-
-
+var positions = []
+var x = 0
+var z = camerapos+x
 
 func _input(event):
 	if not event.is_action_pressed("click"):
@@ -35,6 +34,14 @@ func scenechange():
 	if camerapos < 0:
 		camerapos = 8
 	camera.position = cameraxy[camerapos]
-	player.position = playerspawnpoint[camerapos]
-	movescript._update_navigation_path(playerspawnpoint[camerapos], playerspawnpoint[camerapos])
+	if z == 3:
+		z = 17
+	elif z > 17:
+		z = 3
+	elif z < 0:
+		z = 0
+	elif z == 0:
+		z = 1
+	player.position = positions[z]
+	movescript._update_navigation_path(positions[camerapos+x], positions[camerapos+x])
 	
