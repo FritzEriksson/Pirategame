@@ -86,16 +86,25 @@ script = ExtResource( 7 )
 margin_left = 2419.0
 margin_top = 894.0
 margin_right = 2582.0
-margin_bottom = 1484.0
+margin_bottom = 1374.0
 script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="interactpos" type="Position2D" parent="Map/objects/Grönhouse"]
 position = Vector2( -261.087, 461.766 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Grönhus" type="Sprite" parent="Map/objects/Grönhouse"]
 position = Vector2( 69.8851, 284.199 )
 scale = Vector2( 0.399506, 1 )
 texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Rödhouse" type="Control" parent="Map/objects"]
 margin_left = 1572.0

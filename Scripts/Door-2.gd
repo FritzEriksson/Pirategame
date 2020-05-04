@@ -12,8 +12,8 @@ func _gui_input(event):
 	if event.is_action_pressed("click"):
 		if player.position == intpoint.global_position:
 			sendpos.camerapos = sendpos.camerapos -2
-#byt ut interactpoint mot listplatsen
-			if interactpoint != 3:
+			sendpos.search_point()
+			if sendpos.search != 3:
 				sendpos.x = -2
 			
 			sendpos.scenechange()
