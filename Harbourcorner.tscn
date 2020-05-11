@@ -7,9 +7,9 @@
 [ext_resource path="res://Character.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Bilder/Realbg.png" type="Texture" id=6]
 [ext_resource path="res://Scripts/objects.gd" type="Script" id=7]
-[ext_resource path="res://Scripts/Docks/Grönhouse.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/Clues.gd" type="Script" id=8]
 [ext_resource path="res://Bilder/pointer.png" type="Texture" id=9]
-[ext_resource path="res://Scripts/Docks/Rödhouse.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/Docks/Dockinteract.gd" type="Script" id=10]
 [ext_resource path="res://Scripts/Harbour/Harbourtest.gd" type="Script" id=11]
 [ext_resource path="res://Scripts/Door+1.gd" type="Script" id=12]
 [ext_resource path="res://Scripts/Door-1.gd" type="Script" id=13]
@@ -82,7 +82,7 @@ script = ExtResource( 7 )
 
 [node name="Docks" type="Node" parent="Map/objects"]
 
-[node name="Grönhouse" type="Control" parent="Map/objects"]
+[node name="Clue1" type="Control" parent="Map/objects"]
 margin_left = 2419.0
 margin_top = 894.0
 margin_right = 2582.0
@@ -92,13 +92,13 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="interactpos" type="Position2D" parent="Map/objects/Grönhouse"]
+[node name="interactpos" type="Position2D" parent="Map/objects/Clue1"]
 position = Vector2( -261.087, 461.766 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Grönhus" type="Sprite" parent="Map/objects/Grönhouse"]
+[node name="SP_Clue" type="Sprite" parent="Map/objects/Clue1"]
 position = Vector2( 69.8851, 284.199 )
 scale = Vector2( 0.399506, 1 )
 texture = ExtResource( 9 )
@@ -106,7 +106,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Rödhouse" type="Control" parent="Map/objects"]
+[node name="Interactdocks" type="Control" parent="Map/objects"]
 margin_left = 1572.0
 margin_top = 914.0
 margin_right = 1708.0
@@ -116,7 +116,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="interactpos" type="Position2D" parent="Map/objects/Rödhouse"]
+[node name="interactpos" type="Position2D" parent="Map/objects/Interactdocks"]
 position = Vector2( 268.221, 443.38 )
 
 [node name="Harbour" type="Node" parent="Map/objects"]

@@ -4,7 +4,7 @@ onready var intpoint = get_child(0)
 onready var sendpos = get_node("..")
 
 func _ready():
-	get_node("..").positions.append(intpoint.global_position)
+	get_node("..").positions.append(intpoint.global_position.floor())
 
 func _gui_input(event):
 	sendpos.musvar = 1

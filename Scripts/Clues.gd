@@ -13,3 +13,4 @@ func _gui_input(event):
 			print("Funkar")
 			sprite.hide()
 			sendscore.score = sendscore.score + 1
+			queue_free()

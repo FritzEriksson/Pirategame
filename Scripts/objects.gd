@@ -11,8 +11,7 @@ var cameraxy = [Vector2(0,0), Vector2(1024,0), Vector2(02048,0), Vector2(0,600),
 var positions = []
 var x = 0
 var search = 0
-var saved = Vector2()
-var z = search+x
+var z = 0
 
 func _input(event):
 	if not event.is_action_pressed("click"):
@@ -23,18 +22,14 @@ func _input(event):
 		if musvar == 1:
 			movescript.mus = 1
 			movescript.get_interact_pos(point)
-			saved = point
 			point = Vector2()
 		if musvar == 0:
 			movescript.mus = 0
 			movescript.get_interact_pos(point)
-			saved = point
 			point = Vector2()
 			
 func search_point():
-	search = positions.bsearch(saved)
-	print("search:")
-	print(search)
+	search = positions.find(player.position.floor())
 
 func scenechange():
 	if camerapos > 8:
@@ -42,7 +37,8 @@ func scenechange():
 	if camerapos < 0:
 		camerapos = 8
 	camera.position = cameraxy[camerapos]
-	if z == 3:
+	z = search+x
+	if search == 3:
 		z = 17
 	elif z > 17:
 		z = 3
@@ -54,4 +50,3 @@ func scenechange():
 	print(z)
 	player.position = positions[z]
 	movescript._update_navigation_path(positions[z], positions[z])
-	
