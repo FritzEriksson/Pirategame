@@ -1,10 +1,12 @@
 extends Node2D
 
-var path = "
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+onready var sprite = get_node("Sprite")
+onready var text_label = get_node("")
+onready var get_item = get_node("../../item_class")
+var dialog_over = false
+var dia_index = 1
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+export (String, FILE, "*.json") var dialogue_file_path : String
+var dpath = "data/dialogue.json" #str(get_item.items["1"]["item_path"])
+var dialogue : Dictionary
+
